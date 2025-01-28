@@ -1,4 +1,9 @@
-body {
+html, body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-image: url(./assets/01_background.png);
     background-size: cover;
     background-position: center;
@@ -7,13 +12,42 @@ body {
     width: 100vw;
 }
 
-#board {
+#gameArea {
+    position: relative;
     width: 50vw;
     height: 50vh;
-    background-color: rgba(124, 124, 124, 0.596);
-    position: relative;
-    overflow: hidden;
-    border: 5px solid black;
-    margin: 0 auto;
+    background-color: #00000066;
     border-radius: 10px;
+    border: 10px solid black;
+   
+}
+
+
+
+.food {
+    position: absolute;
+    background-image: url(./assets/02_coin.gif);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 80px;
+}
+
+.snake-segment {
+    background-color: rgb(251,178,71);
+    border: 1px solid rgb(204,79,59);
+    border-radius: 80px;
+    position: absolute;
+    
+   
+}
+
+#snakeHead {
+    background-image: url(./assets/03_snakeHead.gif);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: none;
+    z-index: 10;
 }
