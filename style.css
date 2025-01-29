@@ -14,8 +14,8 @@ html, body {
 
 #gameArea {
     position: relative;
-    width: 50vw;
-    height: 50vh;
+    width: 700px;
+    height: 700px;
     background-color: #00000066;
     border-radius: 10px;
     border: 10px solid black;
