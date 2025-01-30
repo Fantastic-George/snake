@@ -250,11 +250,7 @@ const DIRECTIONS = {
   document.addEventListener("DOMContentLoaded", () => {
     const gameArea = document.getElementById("gameArea");
 
-    // background music
-    const backgroundSound = new Audio('./assets/05_backgroundMusic.mp3');
-    backgroundSound.loop = true;
-    backgroundSound.play();
-    backgroundSound.volume = 0.5;
+   
   
     // Create UI elements (score & instructions)
     const scoreElement = document.createElement("div");
@@ -272,6 +268,12 @@ const DIRECTIONS = {
     const gameState = new GameState();
     const snake = new Snake(gameArea, gameState);
     const foodArray = [];
+
+     // background music
+     const backgroundSound = new Audio('./assets/05_backgroundMusic.mp3');
+     backgroundSound.loop = true;
+     backgroundSound.play();
+     backgroundSound.volume = 0.5;
   
     // Spawn initial food
     foodArray.push(new Food(gameArea, snake));
