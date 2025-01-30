@@ -164,6 +164,10 @@ const DIRECTIONS = {
       this.grow();
       this.gameState.score += 10;
       this.updateScore();
+
+      // coin sound effect
+      const coinSound = new Audio('./assets/04_coinSound.mp3');
+      coinSound.play();
     }
   
     // End game
@@ -245,6 +249,12 @@ const DIRECTIONS = {
   // Game initialization
   document.addEventListener("DOMContentLoaded", () => {
     const gameArea = document.getElementById("gameArea");
+
+    // background music
+    const backgroundSound = new Audio('./assets/05_backgroundMusic.mp3');
+    backgroundSound.loop = true;
+    backgroundSound.play();
+    backgroundSound.volume = 0.5;
   
     // Create UI elements (score & instructions)
     const scoreElement = document.createElement("div");
